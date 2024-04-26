@@ -1,0 +1,20 @@
+{
+  "name": "csknight-dev",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "prebuild": "node ./src/_build-page-script-js-string.js",
+    "start": "npm run prebuild && npx --yes wrangler@latest dev --remote",
+    "deploy": "npm run prebuild && npx --yes wrangler@latest deploy",
+    "logs": "npx --yes wrangler@latest tail",
+    "login": "npx --yes wrangler@latest login"
+  },
+  "dependencies": {
+    "notehost": "^1.0.30"
+  },
+  "devDependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.2",
+    "@cloudflare/workers-types": "^4.20231218.0"
+  }
+}

@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "prebuild": "node ./src/_build-page-script-js-string.js",
+    "prebuild": "node ./src/_build-embedded-strings.js",
     "start": "npm run prebuild && npx --yes wrangler@latest dev --remote",
     "deploy": "npm run prebuild && npx --yes wrangler@latest deploy",
     "logs": "npx --yes wrangler@latest tail",

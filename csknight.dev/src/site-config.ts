@@ -1,5 +1,5 @@
 import { NoteHostSiteConfig, googleTag } from 'notehost'
-import { PAGE_SCRIPT_JS_STRING } from './_page-script-js-string'
+import { PAGE_SCRIPT_JS_STRING, EXTRA_STYLE_CSS_STRING } from './_embedded-strings'
 
 // Set this to your Google Tag ID from Google Analytics
 const GOOGLE_TAG_ID = ''
@@ -50,7 +50,7 @@ export const SITE_CONFIG: NoteHostSiteConfig = {
   googleFont: 'Roboto',
 
   // Custom JS for head and body of a Notion page
-  customHeadCSS: ``,
+  customHeadCSS: EXTRA_STYLE_CSS_STRING,
   customHeadJS: googleTag(GOOGLE_TAG_ID),
   customBodyJS: PAGE_SCRIPT_JS_STRING,
 }

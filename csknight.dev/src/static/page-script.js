@@ -53,8 +53,8 @@ window.onload = function () {
       propertiesDropdown.style.display = 'none'
     }
   }, 1000)
-  tryN(replaceNavBar, 1000, 10);
-  tryN(insertFooter, 1000, 10);
+  tryN(replaceNavBar, 200, 50);
+  tryN(insertFooter, 200, 50);
 }
 
 function toggleDropdownMainMenu() {

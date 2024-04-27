@@ -58,30 +58,24 @@ window.onload = function () {
 }
 
 function toggleDropdownMainMenu() {
+    var menuIcon = document.getElementById('myIcon');
+    if (window.getComputedStyle(menuIcon).display === "none") {
+      return;
+    }
     var mytopnav = document.getElementById('myTopnav');
-    var myicon = document.getElementById('myIcon');
-    mytopnav.menuIsOpen = !mytopnav.menuIsOpen;
-    if (mytopnav.menuIsOpen) {
-        if (mytopnav.subMenuIsOpen) {
-            toggleDropdownSubMenu();
-        }
-        mytopnav.classList.add("menu-open");
-        myicon.classList.add("menu-open");
-    } else {
-        mytopnav.classList.remove("menu-open");
-        myicon.classList.remove("menu-open");
+    mytopnav.classList.toggle("menu-open");
+    myIcon.classList.toggle("menu-open");
+    var mydropdown = document.getElementById('myDropdown');
+    if (mydropdown.classList.contains("submenu-open")) {
+        toggleDropdownSubMenu();
     }
 };
 
 function toggleDropdownSubMenu() {
-    var mytopnav = document.getElementById('myTopnav');
+    var menuIcon = document.getElementById('myIcon');
+    if (window.getComputedStyle(menuIcon).display === "none") {
+      return;
+    }
     var mydropdown = document.getElementById('myDropdown');
-    if (mytopnav.menuIsOpen) {
-        mytopnav.subMenuIsOpen = !mytopnav.subMenuIsOpen;
-        if (mytopnav.subMenuIsOpen) {
-            mydropdown.classList.add("submenu-open");
-        } else {
-            mydropdown.classList.remove("submenu-open");
-        }
-    };
+    mydropdown.classList.toggle("submenu-open");
 };

@@ -25,8 +25,11 @@ export const SITE_CONFIG: NoteHostSiteConfig = {
   slugToPage: {
     '': 'dbaee05a79154f70998eda6b079928fe',
     resume: '1712ba1a8e5c4b26a6c825ff6f7e488c',
-    // contact: 'NOTION_PAGE_ID',
-    // about: 'NOTION_PAGE_ID',
+    about: 'cbb22b809fda49d79b25355b6683da27',
+    blog: '408b6f3a07f842919751a45e5ea6f1e6',
+    tools: '27a8271f26a94ab8ab056bcc6ea9aeab',
+    projects: '4b9d30efc4e54cef902eeccc9118c509',
+    quotes: '59dd2bf0eeee4780b8f302e344b5bd89',
     // // Hint: you can use '/' in slug name to create subpages
     // 'about/people': 'NOTION_PAGE_ID',
   },

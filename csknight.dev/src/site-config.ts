@@ -51,6 +51,9 @@ export const SITE_CONFIG: NoteHostSiteConfig = {
 
   // Custom JS for head and body of a Notion page
   customHeadCSS: EXTRA_STYLE_CSS_STRING,
-  customHeadJS: googleTag(GOOGLE_TAG_ID),
+  customHeadJS: googleTag(GOOGLE_TAG_ID) +
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Roboto+Slab:wght@100;400;700&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap">\n' +
+    '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">\n',
+    // '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">\n',
   customBodyJS: PAGE_SCRIPT_JS_STRING,
 }

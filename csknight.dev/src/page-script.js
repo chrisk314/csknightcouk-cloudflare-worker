@@ -2,6 +2,30 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 
+// const NAV_BAR = '__NAV_BAR__';
+const NAV_BAR = '<nav id="nav"><div id="myTopnav" class="container topnav"></div></nav>';
+
+function replaceNavBar() {
+  var nav = document.querySelector('.notion-topbar');
+  nav = nav ? nav : document.querySelector('.notion-topbar-mobile');
+  if (!nav) {
+    return false;
+  }
+  nav.outerHTML = NAV_BAR;
+  var mytopnav = document.getElementById('myTopnav');
+  mytopnav.menuIsOpen = false;
+  mytopnav.subMenuIsOpen = false;
+  return true;
+}
+
+function tryN(fn, delay, tries) {
+  // Retries the function fn until it returns true or tries reaches 0
+  console.log("trying", fn.name, delay, tries);
+  if(tries && !fn()){
+    setTimeout(tryN.bind(this, fn, delay, tries-1), delay);
+  }
+}
+
 // This script is injected into the Notion page and runs on every page load.
 window.onload = function () {
   setInterval(() => {
@@ -17,17 +41,12 @@ window.onload = function () {
       propertiesDropdown.style.display = 'none'
     }
   }, 1000)
+  tryN(replaceNavBar, 1000, 10);
 }
 
-var nav = document.getElementById('nav');
-var mytopnav = document.getElementById('myTopnav');
-var myicon = document.getElementById('myIcon');
-var mydropdown = document.getElementById('myDropdown');
-
-mytopnav.menuIsOpen = false;
-mytopnav.subMenuIsOpen = false;
-
 function toggleDropdownMainMenu() {
+    var mytopnav = document.getElementById('myTopnav');
+    var myicon = document.getElementById('myIcon');
     mytopnav.menuIsOpen = !mytopnav.menuIsOpen;
     if (mytopnav.menuIsOpen) {
         if (mytopnav.subMenuIsOpen) {
@@ -42,6 +61,8 @@ function toggleDropdownMainMenu() {
 };
 
 function toggleDropdownSubMenu() {
+    var mytopnav = document.getElementById('myTopnav');
+    var mydropdown = document.getElementById('myDropdown');
     if (mytopnav.menuIsOpen) {
         mytopnav.subMenuIsOpen = !mytopnav.subMenuIsOpen;
         if (mytopnav.subMenuIsOpen) {

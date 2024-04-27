@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const outFilePath = path.join(__dirname, '_embedded-strings.ts')
-const pageScriptPath = path.join(__dirname, 'page-script.js')
+const pageScriptPath = path.join(__dirname, 'static/page-script.js')
 const styleCssPath = path.join(__dirname, 'static/style.css')
 const navHtmlPath = path.join(__dirname, 'static/nav.html')
 const footerHtmlPath = path.join(__dirname, 'static/footer.html')

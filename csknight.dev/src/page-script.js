@@ -2,10 +2,8 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 
-// const NAV_BAR = '__NAV_BAR__';
-// const FOOTER = '__FOOTER__;
-const NAV_BAR = '<nav id="nav"><div id="myTopnav" class="container topnav"></div></nav>';
-const FOOTER = '<footer id="footer"></footer>';
+const NAV_BAR = '__NAV_BAR__';
+const FOOTER = '__FOOTER__';
 
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = FOOTER;

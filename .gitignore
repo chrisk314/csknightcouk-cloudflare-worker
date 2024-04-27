@@ -1,3 +1,6 @@
+# Worker script build artefacts
+_embedded-strings.ts
+
 # Logs
 logs
 *.log

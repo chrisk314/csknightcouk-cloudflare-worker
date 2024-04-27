@@ -3,7 +3,12 @@
 /* eslint-disable no-param-reassign */
 
 // const NAV_BAR = '__NAV_BAR__';
+// const FOOTER = '__FOOTER__;
 const NAV_BAR = '<nav id="nav"><div id="myTopnav" class="container topnav"></div></nav>';
+const FOOTER = '<footer id="footer"></footer>';
+
+const footerTemplate = document.createElement('template');
+footerTemplate.innerHTML = FOOTER;
 
 function replaceNavBar() {
   var nav = document.querySelector('.notion-topbar');
@@ -15,6 +20,15 @@ function replaceNavBar() {
   var mytopnav = document.getElementById('myTopnav');
   mytopnav.menuIsOpen = false;
   mytopnav.subMenuIsOpen = false;
+  return true;
+}
+
+function insertFooter() {
+  notionMain = document.querySelector('main[class="notion-frame"]');
+  if (!notionMain) {
+    return false;
+  }
+  notionMain.insertAdjacentElement('beforeend', footerTemplate.content.firstChild);
   return true;
 }
 
@@ -42,6 +56,7 @@ window.onload = function () {
     }
   }, 1000)
   tryN(replaceNavBar, 1000, 10);
+  tryN(insertFooter, 1000, 10);
 }
 
 function toggleDropdownMainMenu() {

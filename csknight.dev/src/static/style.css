@@ -329,7 +329,7 @@ footer.dark-footer {
   display: inline-block;
   margin: 0.4rem;
 }
-.social-footer ul.social-footer-icons .social-icon {
+.social-footer ul.social-footer-icons a.social-icon {
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -342,11 +342,11 @@ footer.dark-footer {
   text-align: center;
   text-decoration: none;
 }
-.dark-footer .social-footer ul.social-footer-icons .social-icon {
+.dark-footer .social-footer ul.social-footer-icons a.social-icon {
   background-color: #ffffff;
 }
 
-.social-icon svg {
+a.social-icon svg {
   padding: 0.3rem;
 }
 .social-footer ul.social-footer-icons svg#github-icon {
@@ -371,9 +371,10 @@ footer.dark-footer {
 .dark-footer .social-footer ul.social-footer-icons svg#gmail-icon {
   fill: black !important;
 }
-.social-footer ul.social-footer-icons .social-icon:hover {
+.social-footer ul.social-footer-icons a.social-icon:hover {
   background-color: #333333;
+
 }
-.dark-footer .social-footer ul.social-footer-icons .social-icon:hover {
+.dark-footer .social-footer ul.social-footer-icons a.social-icon:hover {
   background-color: #b3b3b3;
 }

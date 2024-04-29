@@ -23,11 +23,11 @@ function replaceNavBar() {
 }
 
 function insertFooter() {
-  notionMain = document.querySelector('main[class="notion-frame"]');
-  if (!notionMain) {
+  notionScroller = document.querySelector('.notion-scroller');
+  if (!notionScroller) {
     return false;
   }
-  notionMain.insertAdjacentElement('beforeend', footerTemplate.content.firstChild);
+  notionScroller.insertAdjacentElement('beforeend', footerTemplate.content.firstChild);
   return true;
 }
 

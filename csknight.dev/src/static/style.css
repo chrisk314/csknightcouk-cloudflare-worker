@@ -289,24 +289,24 @@ nav .container {
 /* Style the footer */
 footer {
   border-top: 1px solid #ccc;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-top: auto;
   width: 100%;
-  min-height: 10rem;
+  min-height: 12rem;
   background-color: white;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 footer.dark-footer {
   background-color: black;
   color: white;
 }
 
-.social-footer {
-  padding-top: 2rem;
-  margin-bottom: 2rem;
+footer .social-footer {
+  padding: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -3,8 +3,10 @@
 /* eslint-disable no-param-reassign */
 
 const NAV_BAR = '__NAV_BAR__';
-const FOOTER = '__FOOTER__';
+const navTemplate = document.createElement('template');
+navTemplate.innerHTML = NAV_BAR;
 
+const FOOTER = '__FOOTER__';
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = FOOTER;
 
@@ -14,7 +16,8 @@ function replaceNavBar() {
   if (!nav) {
     return false;
   }
-  nav.outerHTML = NAV_BAR;
+  nav.insertAdjacentElement('afterend', navTemplate.content.firstChild);
+  nav.style.visibility = 'hidden';
   var mytopnav = document.getElementById('myTopnav');
   mytopnav.menuIsOpen = false;
   mytopnav.subMenuIsOpen = false;

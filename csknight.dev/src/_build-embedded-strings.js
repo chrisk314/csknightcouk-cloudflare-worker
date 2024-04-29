@@ -12,7 +12,7 @@ try {
   const navContent = fs.readFileSync(navHtmlPath, 'utf8').replace(/\r?\n|\r/g, '')
   const footerContent = fs.readFileSync(footerHtmlPath, 'utf8').replace(/\r?\n|\r/g, '')
   const escapedPageScriptContent = pageScriptContent
-                                    .replace(/__NAV_BAR__/, navContent)
+                                    .replace(/__NAV__/, navContent)
                                     .replace(/__FOOTER__/, footerContent)
                                     .replace(/\\/g, '\\')
   const styleCssContent = fs.readFileSync(styleCssPath, 'utf8')

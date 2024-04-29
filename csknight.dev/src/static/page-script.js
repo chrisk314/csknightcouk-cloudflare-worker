@@ -2,13 +2,11 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 
-const NAV_BAR = '__NAV_BAR__';
 const navTemplate = document.createElement('template');
-navTemplate.innerHTML = NAV_BAR;
+navTemplate.innerHTML = '__NAV__';
 
-const FOOTER = '__FOOTER__';
 const footerTemplate = document.createElement('template');
-footerTemplate.innerHTML = FOOTER;
+footerTemplate.innerHTML = '__FOOTER__';
 
 function replaceNavBar() {
   var nav = document.querySelector('.notion-topbar');

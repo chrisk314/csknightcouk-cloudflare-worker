@@ -1,17 +1,21 @@
-body, html {
-  min-height: 100vh;
-  margin: 0;
-  background-color: white;
-  overflow-x: hidden;
-}
-body {
-  color: #000;
-  font-weight: 400;
-}
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
-h1, h2, h3, h4, h5, h6 {
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+nav, footer {
+  font-family: 'Roboto';
+  font-size: 1.6em;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  color: #000;
   font-weight: 400;
 }
 
@@ -23,9 +27,11 @@ a:hover {
   text-decoration: underline;
 }
 
-.container {
+nav .container, footer .container {
+  margin: 0 auto;
   max-width: 80rem;
   padding: 0 3rem;
+  width: 100%;
   position: inherit;
 }
 

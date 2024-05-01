@@ -1,9 +1,11 @@
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
+  overflow: hidden;
+  margin: 0;
 }
 body {
-  overflow-x: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
 }
 *, *:after, *:before {

@@ -31,6 +31,15 @@ function insertFooter() {
   return true;
 }
 
+function fixupNotionCss() {
+  notionMain = document.querySelector('main[class="notion-frame"]');
+  if (!notionMain) {
+    return false;
+  }
+  notionMain.style.height = '100%';
+  return true;
+}
+
 function tryN(fn, delay, tries) {
   // Retries the function fn until it returns true or tries reaches 0
   console.log("trying", fn.name, delay, tries);
@@ -56,6 +65,7 @@ window.onload = function () {
   }, 1000)
   tryN(replaceNavBar, 200, 50);
   tryN(insertFooter, 200, 50);
+  tryN(fixupNotionCss, 200, 50);
 }
 
 function toggleDropdownMainMenu() {

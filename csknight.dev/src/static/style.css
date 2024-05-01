@@ -291,8 +291,6 @@ nav .container {
 /* Style the footer */
 footer {
   border-top: 1px solid #ccc;
-  position: relative;
-  margin-top: auto;
   width: 100%;
   min-height: 12rem;
   background-color: white;
@@ -300,6 +298,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 12rem;
   z-index: 100;
 }
 footer.dark-footer {

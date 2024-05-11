@@ -18,6 +18,8 @@ function replaceNavBar() {
   nav.style.visibility = 'hidden';
   var header = document.querySelector('header');
   header.style.minHeight = '5rem';
+  var notionMain = document.querySelector('main.notion-frame');
+  notionMain.style.height = 'calc(100vh - 5rem)';
   var mytopnav = document.getElementById('myTopnav');
   mytopnav.menuIsOpen = false;
   mytopnav.subMenuIsOpen = false;
@@ -39,8 +41,6 @@ function fixupNotionCss() {
     return false;
   }
   divLayout.style.paddingBottom = '10rem';
-  notionMain = document.querySelector('main.notion-frame');
-  notionMain.style.height = '100%';
   return true;
 }
 

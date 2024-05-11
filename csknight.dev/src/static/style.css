@@ -295,10 +295,10 @@ footer {
   min-height: 12rem;
   background-color: white;
   color: black;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 12rem;
+  flex: 0 0 12rem; /* shorthand for: flex-grow flex-shrink flex-basis */
   z-index: 100;
 }
 footer.dark-footer {

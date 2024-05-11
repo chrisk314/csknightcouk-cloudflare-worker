@@ -23,19 +23,21 @@ function replaceNavBar() {
 }
 
 function insertFooter() {
-  notionScroller = document.querySelector('.notion-scroller');
-  if (!notionScroller) {
+  contentEditable = document.querySelector("main.notion-frame div.notion-scroller div.whenContentEditable");
+  if (!contentEditable) {
     return false;
   }
-  notionScroller.insertAdjacentElement('beforeend', footerTemplate.content.firstChild);
+  contentEditable.insertAdjacentElement('afterend', footerTemplate.content.firstChild);
   return true;
 }
 
 function fixupNotionCss() {
-  notionMain = document.querySelector('main[class="notion-frame"]');
-  if (!notionMain) {
+  divLayout = document.querySelector("main.notion-frame div.notion-scroller div.whenContentEditable div.layout");
+  if (!divLayout) {
     return false;
   }
+  divLayout.style.paddingBottom = '10rem';
+  notionMain = document.querySelector('main.notion-frame');
   notionMain.style.height = '100%';
   return true;
 }

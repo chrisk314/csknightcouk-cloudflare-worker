@@ -14,7 +14,7 @@ export const SITE_CONFIG: NoteHostSiteConfig = {
   siteImage: '',
 
   // URL to custom favicon.ico
-  siteIcon: 'https://drive.google.com/file/d/18jThHHupSYLXVp5NxQYoY-OJKBUDYHf4/view',
+  siteIcon: 'https://i.imgur.com/mJy0iMz.png',
 
   // Additional safety: avoid serving extraneous Notion content from your website
   // Use the value from your Notion settings => Workspace => Settings => Domain

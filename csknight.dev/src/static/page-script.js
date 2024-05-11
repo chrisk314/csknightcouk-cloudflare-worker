@@ -31,16 +31,9 @@ function insertFooter() {
   if (!contentEditable) {
     return false;
   }
+  layout = contentEditable.querySelector('div.layout');
+  layout.style.paddingBottom = '10rem';
   contentEditable.insertAdjacentElement('afterend', footerTemplate.content.firstChild);
-  return true;
-}
-
-function fixupNotionCss() {
-  divLayout = document.querySelector("main.notion-frame div.notion-scroller div.whenContentEditable div.layout");
-  if (!divLayout) {
-    return false;
-  }
-  divLayout.style.paddingBottom = '10rem';
   return true;
 }
 
@@ -69,7 +62,6 @@ window.onload = function () {
   }, 1000)
   tryN(replaceNavBar, 200, 50);
   tryN(insertFooter, 200, 50);
-  tryN(fixupNotionCss, 200, 50);
 }
 
 function toggleDropdownMainMenu() {

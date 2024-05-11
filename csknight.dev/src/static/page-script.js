@@ -16,6 +16,8 @@ function replaceNavBar() {
   }
   nav.insertAdjacentElement('afterend', navTemplate.content.firstChild);
   nav.style.visibility = 'hidden';
+  var header = document.querySelector('header');
+  header.style.minHeight = '5rem';
   var mytopnav = document.getElementById('myTopnav');
   mytopnav.menuIsOpen = false;
   mytopnav.subMenuIsOpen = false;
